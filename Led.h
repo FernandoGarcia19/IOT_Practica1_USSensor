@@ -5,7 +5,7 @@ class Led {
 
   private:
     byte pin;
-    byte state = STATE_OFF;
+    byte state =  STATE_OFF;
     bool isOn = false;
     unsigned int blinkMillis = 0;
     unsigned long previousMillis = 0;

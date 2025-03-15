@@ -5,7 +5,7 @@ class UltraSonicSensor {
   private:
     byte triggerPin;
     byte echoPin;
-    long distance;
+    float distance;
   public:
     UltraSonicSensor(const byte& triggerPin, const byte& echoPin):
     triggerPin(triggerPin), echoPin(echoPin), distance(0)  
@@ -31,7 +31,7 @@ class UltraSonicSensor {
       this->distance = pulseIn(echoPin, HIGH); 
       Serial.println(getDistanceCM());
     }
-    long getDistanceCM() const 
+    float getDistanceCM() const 
     {       
       return (0.01723 * this->distance);
     }
